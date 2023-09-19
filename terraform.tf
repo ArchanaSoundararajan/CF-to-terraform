@@ -1,5 +1,5 @@
 provider "aws" {
-    region = "eu-west-1"
+    region = "ap-southeast-1"
 }
 
 resource "aws_elastic_beanstalk_application" "my_ebs" {
