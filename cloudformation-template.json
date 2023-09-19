@@ -4,7 +4,7 @@
 			"Type": "AWS::EC2::VPC",
 			"DeletionPolicy": "Retain",
 			"Properties": {
-				"CidrBlock": "10.0.0.0/16",
+				"CidrBlock": "10.1.0.0/16",
 				"EnableDnsSupport": "true",
 				"EnableDnsHostnames": "true",
 				"Tags": [{
