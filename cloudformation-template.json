@@ -1,18 +1,17 @@
 {
-    "Resources": {
-        "MyEBS": {
-            "Type": "AWS::ElasticBeanstalk::Application",
-            "Properties": {
-                "ApplicationName": "coffee-service"
-            }
-        },
-        "MyEBSStaging": {
-            "Type": "AWS::ElasticBeanstalk::Environment",
-            "Properties": {
-                "ApplicationName": "coffee-service",
-                "EnvironmentName": "staging",
-                "SolutionStackName": "64bit Amazon Linux 2017.09 v2.6.5 running Java 8"
-            }
-        }
-    }
+	"Resources": {
+		"myVPC": {
+			"Type": "AWS::EC2::VPC",
+			"DeletionPolicy": "Retain",
+			"Properties": {
+				"CidrBlock": "10.0.0.0/16",
+				"EnableDnsSupport": "true",
+				"EnableDnsHostnames": "true",
+				"Tags": [{
+					"Key": "stack",
+					"Value": "production"
+				}]
+			}
+		}
+	}
 }
